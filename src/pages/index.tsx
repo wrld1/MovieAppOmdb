@@ -94,7 +94,7 @@ const Home: NextPage<Props> = () => {
             ))}
           </div>
         )}
-        <div className="flex justify-center pb-4">
+        <div className="flex justify-center pb-10">
           <PaginationButton
             buttonText="Previous page"
             onClickHandler={handlePrevPageClick}
