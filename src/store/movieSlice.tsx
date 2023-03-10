@@ -30,7 +30,7 @@ export const fetchMovies = createAsyncThunk(
   "movies/fetchMovies",
   async ({ searchTerm, page }: FetchMoviesParams) => {
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_API_KEY}&s=${searchTerm}&page=${page}`
+      `https://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_API_KEY}&s=${searchTerm}&page=${page}`
     );
     const data = await response.json();
     if (data.Response === "False") {

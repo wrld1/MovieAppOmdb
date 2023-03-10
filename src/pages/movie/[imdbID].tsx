@@ -100,7 +100,7 @@ export const getServerSideProps: GetServerSideProps<MovieProps> = async ({
 }) => {
   const { imdbID } = query;
   const response = await axios.get(
-    `http://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_API_KEY}&i=${imdbID}`
+    `https://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_API_KEY}&i=${imdbID}`
   );
   const { Title, Year, Poster, Plot, Actors, Genre, imdbRating, Country } =
     response.data;
