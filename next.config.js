@@ -11,14 +11,14 @@ const nextConfig = {
     minimumCacheTTL: 1500000,
   },
   env: {
-    apiKey: process.env.API_KEY,
+    apiKey: process.env.NEXT_PUBLIC_API_KEY,
   },
   serverRuntimeConfig: {
     // Will only be available on the server side
-    apiKey: process.env.API_KEY, // Pass through env variables
+    apiKey: process.env.NEXT_PUBLIC_API_KEY,
   },
   publicRuntimeConfig: {
-    apiKey: process.env.API_KEY,
+    apiKey: process.env.NEXT_PUBLIC_API_KEY,
   },
 };
 
