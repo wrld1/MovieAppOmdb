@@ -6,7 +6,9 @@ module.exports = function (app) {
     createProxyMiddleware({
       target: "http://www.omdbapi.com",
       changeOrigin: true,
-      secure: true,
+      pathRewrite: {
+        "^/api": "",
+      },
     })
   );
 };

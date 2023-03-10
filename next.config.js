@@ -1,3 +1,5 @@
+const apiProxy = require("./apiProxy");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -19,14 +21,7 @@ const nextConfig = {
   publicRuntimeConfig: {
     apiKey: process.env.NEXT_PUBLIC_API_KEY,
   },
-  async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: "/apiProxy/:path*",
-      },
-    ];
-  },
+  serverMiddleware: [apiProxy],
 };
 
 module.exports = nextConfig;
