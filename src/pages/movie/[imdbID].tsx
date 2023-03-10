@@ -43,7 +43,7 @@ const MoviePage: FC<MovieProps> = ({ movie }: MovieProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="text-white container flex mx-auto flex-wrap justify-center xl:gap-8">
-        <div className="p-6 pb-0 flex flex-col gap-6 text-3xl justify-center items-center">
+        <div className="p-6 pb-0 flex flex-col gap-6 text-3xl justify-between items-center ">
           <h1 className="font-bold rounded-lg bg-gray-600 p-2 text-center text-lg md:text-3xl">
             {Title}
           </h1>
@@ -56,7 +56,9 @@ const MoviePage: FC<MovieProps> = ({ movie }: MovieProps) => {
               height={300}
             />
           ) : (
-            <p>No poster available</p>
+            <div className="lg:mb-20">
+              <p>No poster available</p>
+            </div>
           )}
         </div>
         <div className="p-6 flex flex-col justify-center xl:w-2/5 ">
