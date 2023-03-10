@@ -1,4 +1,4 @@
-const apiProxy = require("./apiProxy");
+// const apiProxy = require("./apiProxy");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -21,7 +21,8 @@ const nextConfig = {
   publicRuntimeConfig: {
     apiKey: process.env.NEXT_PUBLIC_API_KEY,
   },
-  serverMiddleware: [apiProxy],
 };
 
 module.exports = nextConfig;
+
+// serverMiddleware: [apiProxy],
