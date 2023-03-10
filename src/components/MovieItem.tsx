@@ -55,7 +55,7 @@ const MovieItem: FC<MovieProps> = ({ movie, ListType }) => {
             ? handleFavoriteClick
             : () => removeFavorite(movie, setShowPopup)
         }
-        className="text-white bg-[#4B4F76] hover:bg-[#4f5585] rounded-xl px-3 py-1 font-bold w-40 h-14 inline-flex items-center justify-center"
+        className="text-white bg-[#4B4F76] hover:bg-[#4f5585] rounded-xl px-3 py-0 lg:py-1 font-bold w-40 h-14 inline-flex items-center justify-center"
       >
         {ListType === "FavoritesList" ? "Remove from favorites" : buttonText}
       </button>
